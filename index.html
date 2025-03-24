@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flashcard Words Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--ให้หน้าเว็บแสดงภาษาไม่เพี้ยน & แสดงบนมือถือได้-->
+    <link rel="stylesheet" href="style.css" />
+    <!--style.css-->
+  </head>
+
+  <body>
+    <h1 style="color: palevioletred; font-size: 300%">Flashcard Words Quiz</h1>
+    <button id="start-btn" style="background-color: #f8c75d" onclick="start_btn()"><b>Start</b></button><br />
+    <!-- Start button -->
+
+    <form id="flashcard-form">
+      <div style="color:mediumvioletred;">Please fill in both words and meaning.</div>
+      <input type="text" id="word" placeholder="Words to remember" required><br>
+      <input type="text" id="meaning" placeholder="Meaning" required><br>
+      <!-- required = จำเป็นต้องกรอก-->
+      <button onclick="table_list(event)"><b>Add Word</b></button>
+      <!-- Add Word button -->
+      <div style="color:firebrick; font-style: italic; margin-bottom: 10px;">Click on a word to delete it.</div>
+    </form>
+
+    <!-- Game -->
+    <div id="game-container" style ="display:none;">
+      <img id="image" src="postit.png" class="picture"></img>
+      <h1 id="question-word" class="question-word"></h1>
+      <input type="text" id="answer-input" placeholder="Enter meaning" required/>
+      <button onclick="checkAnswer()">Check Answer</button>
+      <div id="result-message" style="font-size: 30px;"></div>
+    </div>
+
+    
+    <table id="flashcard-table">
+      <thead>
+        <tr>
+            <!-- หัวข้อ -->
+            <th>Word</th>
+            <th>Meaning</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- รายการคำ -->
+      </tbody>
+    </table>
+
+    <script src="project.js"></script>
+  </body>
+</html>
