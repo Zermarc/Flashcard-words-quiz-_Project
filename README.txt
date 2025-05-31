@@ -4,3 +4,6 @@ Technologies: JavaScript, HTML, CSS
 
 ## Certifications 🏆  
 Introduction to JavaScript - borntoDev | 2025
+
+Video present
+https://youtu.be/t-qEBLVOaHQ
